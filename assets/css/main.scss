@@ -18,6 +18,25 @@ html, body
   margin: 0;
 }
 
+a
+{
+  font-style: normal;
+  color: $blue;
+  text-decoration: none;
+}
+
+a:hover
+{
+  border-bottom: 2px solid $blue;
+}
+
+a:active
+{
+  font-style: italic;
+  color: $dark-gray;
+  border-bottom: 2px solid $dark-gray;
+}
+
 .page-enter-active, .page-leave-active
 {
   transition: opacity .5s
