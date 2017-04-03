@@ -14,12 +14,13 @@ html, body
   color: $black;
   letter-spacing: 0.5px;
   font-family: "Source Sans Pro", Arial, sans-serif;
-  height: 100vh;
+  height: 100vh;;
   margin: 0;
 }
 
 a
 {
+  font-style: normal;
   color: $blue;
   text-decoration: none;
 }
