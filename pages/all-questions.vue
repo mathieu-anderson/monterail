@@ -1,8 +1,10 @@
 <template>
-    <section class="container">
-      <AppHeader/>
-      <h1>ALL QUESTIONS</h1>
-    </section>
+  <div>
+    <AppHeader/>
+    <div class="container">
+      ALL QUESTIONS
+    </div>
+  </div>
 </template>
 
 <script>
@@ -15,6 +17,12 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import '../assets/css/main.scss';
 
+.container {
+  padding-top: 25vh;
+  background-color: $gray;
+  margin: 0 3em 5em 3em;
+}
 </style>

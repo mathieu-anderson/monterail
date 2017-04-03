@@ -13,19 +13,19 @@
         <i class="ion-ios-plus"></i>
       </div>
       <div class="select_questions">
-        <input type="radio" name="myShelf" value="">
+        <input type="radio" name="selectQuestions" value="myShelf" checked>
           My shelf
         </input>
       </div>
       <div class="select_questions">
-        <input type="radio" name="allQuestions" value="">
+        <input type="radio" name="selectQuestions" value="allQuestions">
           All questions
         </input>
       </div>
     </section>
     <section class="sortQuestions">
       <div class="sort">
-        Sort by: <a href="#" class="">recent</a> or <a href="#">hot</a>
+        Sort by: <a href="#" class="active">recent</a> or <a href="#">hot</a>
       </div>
     </section>
     <section class="searchField">
@@ -41,6 +41,7 @@
 @import '../assets/css/main.scss';
 
   header {
+    position: fixed;
     background-color: $white;
     width: 100vw;
     padding: 1em 0em 0em 0em;
@@ -79,14 +80,17 @@
       .title_questions {
         text-align: left;
         font-size: 2em;
-        font-weight: bolder;
+        font-weight: 600;
         padding: 1em 1em 1em 0em;
         flex: 0 1 auto;
       }
       .symbol_questions {
-        font-size: 2.5em;
+        font-size: 2em;
         color: $blue;
         flex: 1;
+      }
+      .symbol_questions:hover {
+        cursor: pointer;
       }
       .select_questions {
         text-align: right;
@@ -102,6 +106,7 @@
     grid-row-start: row1;
     grid-row-end: row1;
     .sort{
+      font-family: 'Noto Serif', serif;
       flex: 1;
       text-align: center;
       font-style: italic;
@@ -143,6 +148,13 @@
   .headerButton:hover {
     color: $blue;
     border: 1px solid $blue;
+  }
+
+  .active, .active:hover {
+    font-style: normal;
+    font-family: "Noto Sans", Arial, sans-serif;
+    color: $dark-gray;
+    border-bottom: 2px solid $dark-gray;
   }
 
 </style>
