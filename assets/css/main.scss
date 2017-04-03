@@ -1,0 +1,28 @@
+$light-blue: #dff3fd;
+$blue: #0266B3;
+$light-gray: #FBFBFB;
+$gray: #EEEEEE;
+$dark-gray: #A7A9AC;
+$yellow: #FFE1AD;
+$black: #292828;
+$white: #FFFFFF;
+$red: #DD173F;
+
+html, body
+{
+  background-color: $yellow;
+  color: $black;
+  letter-spacing: 0.5px;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+
+.page-enter-active, .page-leave-active
+{
+  transition: opacity .5s
+}
+.page-enter, .page-leave-active
+{
+  opacity: 0
+}
