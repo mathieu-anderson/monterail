@@ -1,8 +1,8 @@
 <template>
   <header>
     <section class="back">
-      <div class="symbol_back">
-        <
+      <div class="symbol_back headerButton">
+        <i class="ion-ios-arrow-left"></i>
       </div>
     </section>
     <section class="questions">
@@ -30,7 +30,7 @@
       <input type="text" name="searchQuestion" placeholder="Search questions" value="">
     </section>
     <section class="searchButton">
-      <div id="searchButton">SEARCH</div>
+      <div class="headerButton">SEARCH</div>
     </section>
   </header>
 </template>
@@ -43,7 +43,7 @@
     width: 100vw;
     display: grid;
     grid-template-columns: [col1start] 15vw [col2start] 1fr [col3start] 20vw [col3end];
-    grid-template-rows: [row1] 10vh [row2] 10vh;
+    grid-template-rows: [row1] 10vh [row2] 7vh;
   }
 
   .back {
@@ -52,7 +52,16 @@
     grid-column-end: col2start;
     grid-row-start: row1;
     grid-row-end: row2;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
       .symbol_back {
+        width: 1.3em;
+        height: 1.3em;
+        padding: 0.1em;
+        font-size: 2em;
+        border-radius: 50%;
       }
   }
 
@@ -104,7 +113,7 @@
     grid-row-end: row2;
   }
 
-  #searchButton {
+  .headerButton {
     border: 1px solid $dark-gray;
     color: $dark-gray;
     padding: 0.5em;
@@ -112,7 +121,7 @@
     cursor: pointer;
   }
 
-  #searchButton:hover {
+  .headerButton:hover {
     color: $blue;
     border: 1px solid $blue;
   }

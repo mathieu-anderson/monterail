@@ -10,7 +10,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Monterail test project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {rel: 'stylesheet', href: 'http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'}
     ]
   },
   /*
