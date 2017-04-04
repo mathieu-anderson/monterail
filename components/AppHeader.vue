@@ -1,9 +1,7 @@
 <template>
   <header>
     <section class="back">
-      <div class="back-symbol headerButton">
-        <i class="ion-ios-arrow-left"></i>
-      </div>
+      <div class="back-symbol" />
     </section>
     <section class="questions">
       <div class="questions-title">
@@ -48,6 +46,7 @@
     display: grid;
     grid-template-columns: [col1start] 15vw [col2start] 1fr [col3start] 18vw [col3end] 15vw;
     grid-template-rows: [row1] 10vh [row2] 1fr;
+    box-shadow: 0px 1px 5px #edebed;
   }
 
   .back {
@@ -61,10 +60,11 @@
     justify-content: center;
     padding: 0em 0em 0em 1em;
       .back-symbol {
-        // width: 1em;
-        // height: 1em;
-        // font-size: 2em;
-        // border-radius: 50%;
+        width: 3em;
+        height: 3em;
+        background-image: url('../static/icon-back.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
       }
   }
 

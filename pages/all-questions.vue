@@ -2,17 +2,21 @@
   <div>
     <AppHeader/>
     <div class="container">
-      ALL QUESTIONS
+      <question/>
+      <question/>
+      <question/>
     </div>
   </div>
 </template>
 
 <script>
 import AppHeader from '../components/AppHeader.vue'
+import Question from '../components/question.vue'
 
 export default {
   components: {
-    AppHeader
+    AppHeader,
+    Question
   }
 }
 </script>
@@ -23,6 +27,6 @@ export default {
 .container {
   padding-top: 25vh;
   background-color: $gray;
-  margin: 0 3em 5em 3em;
+  margin: 0em 3em 5em 3em;
 }
 </style>
