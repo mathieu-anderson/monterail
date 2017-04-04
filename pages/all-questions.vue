@@ -3,8 +3,6 @@
     <AppHeader/>
     <div class="container">
       <question/>
-      <question/>
-      <question/>
     </div>
   </div>
 </template>
@@ -26,7 +24,7 @@ export default {
 
 .container {
   padding-top: 25vh;
-  background-color: $gray;
+  background-color: $light-gray;
   margin: 0em 3em 5em 3em;
 }
 </style>

@@ -50,6 +50,12 @@ a:active
   border-bottom: 2px solid $dark-gray;
 }
 
+.smallCaps {
+  font-size: 0.8em;
+  font-weight: 600;
+  color: $dark-gray;
+}
+
 .page-enter-active, .page-leave-active
 {
   transition: opacity .5s
