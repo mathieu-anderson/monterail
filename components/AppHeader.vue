@@ -1,35 +1,33 @@
 <template>
   <header>
     <section class="back">
-      <div class="symbol_back headerButton">
-        <i class="ion-ios-arrow-left"></i>
-      </div>
+      <div class="back-symbol" />
     </section>
     <section class="questions">
-      <div class="title_questions">
+      <div class="questions-title">
         QUESTIONS
       </div>
-      <div class="symbol_questions">
+      <div class="questions-symbol">
         <i class="ion-ios-plus"></i>
       </div>
-      <div class="select_questions">
-        <input type="radio" name="myShelf" value="">
+      <div class="questions-select">
+        <input type="radio" name="selectQuestions" value="myShelf" checked>
           My shelf
         </input>
       </div>
-      <div class="select_questions">
-        <input type="radio" name="allQuestions" value="">
+      <div class="questions-select">
+        <input type="radio" name="selectQuestions" value="allQuestions">
           All questions
         </input>
       </div>
     </section>
     <section class="sortQuestions">
-      <div class="sort">
-        Sort by: <a href="#" class="">recent</a> or <a href="#">hot</a>
+      <div class="sortQuestions-elements">
+        Sort by: <a href="#" class="active">recent</a> or <a href="#">hot</a>
       </div>
     </section>
     <section class="searchField">
-      <input class= "search" type="text" name="searchQuestion" placeholder="Search questions" value="">
+      <input class= "searchField-text" type="text" name="searchQuestion" placeholder="Search questions" value="">
     </section>
     <section class="searchButton">
       <div class="headerButton">SEARCH</div>
@@ -41,12 +39,14 @@
 @import '../assets/css/main.scss';
 
   header {
+    position: fixed;
     background-color: $white;
     width: 100vw;
-    padding: 1em 0em 0em 0em;
+    padding: 1em 2em 0em 2em;
     display: grid;
-    grid-template-columns: [col1start] 15vw [col2start] 1fr [col3start] 20vw [col3end];
+    grid-template-columns: [col1start] 15vw [col2start] 1fr [col3start] 18vw [col3end] 15vw;
     grid-template-rows: [row1] 10vh [row2] 1fr;
+    box-shadow: 0px 1px 5px #edebed;
   }
 
   .back {
@@ -56,14 +56,15 @@
     grid-row-end: row2;
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
+    align-items: left;
     justify-content: center;
-      .symbol_back {
-        width: 1.3em;
-        height: 1.3em;
-        padding: 0.1em;
-        font-size: 2em;
-        border-radius: 50%;
+    padding: 0em 0em 0em 1em;
+      .back-symbol {
+        width: 3em;
+        height: 3em;
+        background-image: url('../static/icon-back.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
       }
   }
 
@@ -76,21 +77,26 @@
     flex-flow: row nowrap;
     align-items: center;
     align-content: stretch;
-      .title_questions {
+      .questions-title {
         text-align: left;
         font-size: 2em;
-        font-weight: bolder;
+        font-weight: 600;
         padding: 1em 1em 1em 0em;
         flex: 0 1 auto;
       }
-      .symbol_questions {
-        font-size: 2.5em;
+      .questions-symbol {
+        font-size: 2em;
         color: $blue;
         flex: 1;
       }
-      .select_questions {
+      .questions-symbol:hover {
+        cursor: pointer;
+      }
+      .questions-select {
         text-align: right;
-        flex: 0.5;
+        font-size: 0.9em;
+        font-weight: 600;
+        flex: 0.7;
       }
   }
 
@@ -101,10 +107,12 @@
     grid-column-end: col3end;
     grid-row-start: row1;
     grid-row-end: row1;
-    .sort{
+    .sortQuestions-elements{
+      font-family: 'Noto Serif', serif;
       flex: 1;
-      text-align: center;
+      text-align: right;
       font-style: italic;
+      font-size: 0.9em;
     }
   }
 
@@ -116,7 +124,7 @@
     grid-row-start: row2;
     grid-row-end: row2;
     padding: 0em 0em 1em 0em;
-    .search {
+    .searchField-text {
       flex: 1;
       background-color: $light-gray;
       padding: 0em 0em 0em 1em;
@@ -128,7 +136,8 @@
     grid-column-end: col3end;
     grid-row-start: row2;
     grid-row-end: row2;
-    padding: 0em 2em 1em 2em;
+    text-align: right;
+    padding: 0em 0em 1em 2em;
   }
 
   .headerButton {
@@ -143,6 +152,13 @@
   .headerButton:hover {
     color: $blue;
     border: 1px solid $blue;
+  }
+
+  .active, .active:hover {
+    font-style: normal;
+    font-family: "Titillium Web", Arial, sans-serif;
+    color: $dark-gray;
+    border-bottom: 2px solid $dark-gray;
   }
 
 </style>
