@@ -1,13 +1,13 @@
 # monterail
 
 A test project for Monterail. Task list :
-* [] Implement views
-* [] Make them responsive
-* [] Connect modal to users
-* [] Use templates
-* [] Add pagination and sorting
-* [] Add search
-* [] Implement voting
+* [ ] Implement views
+* [ ] Make them responsive
+* [ ] Connect modal to users
+* [ ] Use templates
+* [ ] Add pagination and sorting
+* [ ] Add search
+* [ ] Implement voting
 * [x] Add routing
 
 # My solution
