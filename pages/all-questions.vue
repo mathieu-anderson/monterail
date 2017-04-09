@@ -23,6 +23,7 @@ export default {
 @import '../assets/css/main.scss';
 
 .container {
+  height: 90vh;
   padding-top: 25vh;
   background-color: $light-gray;
   margin: 0em 3em 5em 3em;
