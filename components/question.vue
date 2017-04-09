@@ -18,19 +18,19 @@
         <span class="question-answers-activities-text">more activities</span>
       </div>
       <div class="question-answers-activity">
-        <div class="question-portrait-image" />
+        <div class="question-answers-portrait-image" />
         <div class="question-answers-activity-info smallCaps">COMMENTED</div>
       </div>
       <div class="question-answers-activity">
-        <div class="question-portrait-image" />
+        <div class="question-answers-portrait-image" />
         <div class="question-answers-activity-info smallCaps">COMMENTED</div>
       </div>
       <div class="question-answers-activity">
-        <div class="question-portrait-image" />
+        <div class="question-answers-portrait-image" />
         <div class="question-answers-activity-info smallCaps">COMMENTED</div>
       </div>
       <div class="question-answers-activity">
-        <div class="question-portrait-image" />
+        <div class="question-answers-portrait-image" />
         <div class="question-answers-activity-info smallCaps">ANSWERED</div>
       </div>
     </div>
@@ -57,14 +57,6 @@ export default {
   display: grid;
   grid-template-columns: [col1start] 12.5% [col2start] 1fr [col3start] 25% [col3end];
   grid-template-rows: [row1] 17vh [row2] 25vh [row3] 8vh;
-}
-
-.spacer {
-  grid-column-start: col1start;
-  grid-column-end: col3end;
-  grid-row-start: row3;
-  grid-row-end: row3;
-  background-color: $white
 }
 
 .question-portrait {
@@ -110,13 +102,13 @@ export default {
   grid-column-end: col2start;
   grid-row-start: row2;
   grid-row-end: row2;
-  bottom: 0;
+  background-color: $light-blue;
+
   .question-asked-text {
     margin: 0.5em;
     border-top: 1px solid $dark-gray;
     text-align: center;
   }
-
 }
 
 .question-answers {
@@ -126,6 +118,18 @@ export default {
   grid-row-end: row2;
   background-color: $white;
   display: flex;
+  justify-content: center;
+  padding: 1em;
+  .question-answers-portrait-image {
+    flex: 1;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    background-image: url("../static/portrait.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+  }
   .question-answers-activities {
     display: flex;
     flex-flow: column nowrap;
@@ -148,5 +152,15 @@ export default {
   grid-row-end: row2;
   background-color: $white;
 }
+
+
+.spacer {
+  grid-column-start: col1start;
+  grid-column-end: col3end;
+  grid-row-start: row3;
+  grid-row-end: row3;
+  background-color: $white
+}
+
 
 </style>

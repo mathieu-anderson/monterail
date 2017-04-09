@@ -22,4 +22,21 @@ export default {
 
 <style scoped>
 
+  .container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   height: 100vh;
+   font-size: 3em;
+   line-height: 1em;
+  }
+
+  .button{
+    border-bottom: 2px solid #FFE1AD;
+  }
+
+  .button:hover{
+    border-bottom: 2px solid #0266B3;
+  }
 </style>
