@@ -19,8 +19,9 @@ A test project for Monterail. Task list :
 ### Choice of SASS :
 - The design provided are very consistant : SASS makes it easier to centralize the style constants.
 
-### CSS methodology :
+### CSS approach :
 - BEM : an attempt to keep the naming convention semantically significant.
+- Heavy use of the grid and flexboxes : formidable tools to break free from styling frameworks like Foundation and Bootstrap.
 
 ## Build Setup
 
